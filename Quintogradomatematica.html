@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matemáticas - 5° de Secundaria | Colegio Sagrado Corazón de Jesús</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #002244;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #003366;
+    }
+    .pregunta, .ejercicio {
+      background-color: #e6f2ff;
+      padding: 15px;
+      margin-top: 15px;
+      border-left: 5px solid #3399ff;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .test-section {
+      background-color: #ffefef;
+      border: 2px dashed #cc0000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .test-section h2 {
+      color: #cc0000;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #001a33;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Matemáticas - 5° de Secundaria</h1>
+  <p>Colegio Sagrado Corazón de Jesús - Cochas Chico, Huancayo</p>
+</header>
+
+<nav>
+  <a href="#unidad1">Derivadas</a>
+  <a href="#unidad2">Límites</a>
+  <a href="#unidad3">Álgebra</a>
+  <a href="#unidad4">Geometría</a>
+  <a href="#unidad5">Estadística</a>
+  <a href="#test">Fast Test</a>
+</nav>
+
+<main>
+  <section id="unidad1">
+  <h2>Unidad 1: Derivadas Básicas</h2>
+  <p><strong>Teoría:</strong> La derivada es una operación matemática que mide el cambio instantáneo de una función respecto a su variable independiente. Su interpretación geométrica es la pendiente de la recta tangente a la gráfica en un punto específico.</p>
+  <p><strong>Fórmula básica:</strong> f'(x) = lim (h→0) [f(x + h) - f(x)] / h</p>
+  <p>Las derivadas son fundamentales en física para estudiar velocidad, aceleración y en economía para optimizar costos y beneficios.</p>
+  <p><strong>Reglas importantes:</strong></p>
+  <ul>
+    <li><strong>Potencias:</strong> d/dx [xⁿ] = n·xⁿ⁻¹</li>
+    <li><strong>Suma y resta:</strong> d/dx [f(x) ± g(x)] = f'(x) ± g'(x)</li>
+    <li><strong>Constantes:</strong> d/dx [c] = 0</li>
+  </ul>
+  <p><strong>Ejemplos:</strong></p>
+  <ul>
+    <li>f(x) = x² → f'(x) = 2x</li>
+    <li>f(x) = 3x³ - 5x² + 2 → f'(x) = 9x² - 10x</li>
+    <li>f(x) = 7 → f'(x) = 0</li>
+  </ul>
+</section>
+
+<section id="unidad2">
+  <h2>Unidad 2: Límites de Funciones</h2>
+  <p><strong>Teoría:</strong> El límite es el valor al que se aproxima una función cuando su variable se acerca a un número específico. Permite analizar el comportamiento de las funciones cerca de ciertos puntos, incluso si la función no está definida allí.</p>
+  <p><strong>Fórmula básica:</strong> lim(x→a) f(x)</p>
+  <p><strong>Casos comunes:</strong></p>
+  <ul>
+    <li>Limites directos: Solo reemplaza el valor.</li>
+    <li>Indeterminaciones (0/0): Se resuelve factorizando o aplicando regla de L'Hôpital.</li>
+  </ul>
+  <p><strong>Ejemplos:</strong></p>
+  <ul>
+    <li>lim(x→2) (x² + 3) = 2² + 3 = 7</li>
+    <li>lim(x→3) (x² - 9)/(x - 3): Factorizamos → [(x - 3)(x + 3)] / (x - 3) → Límite: 6</li>
+    <li>lim(x→0) sin(x)/x = 1 (límite notable)</li>
+  </ul>
+</section>
+
+<section id="unidad3">
+  <h2>Unidad 3: Álgebra y Funciones Polinómicas</h2>
+  <p><strong>Teoría:</strong> Las funciones polinómicas son expresiones algebraicas con potencias enteras no negativas. Su gráfica es continua y suave. Se representan como f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + … + a₀.</p>
+  <p><strong>Propiedades:</strong></p>
+  <ul>
+    <li><strong>Grado:</strong> Mayor exponente.</li>
+    <li><strong>Raíces:</strong> Valores donde f(x) = 0.</li>
+    <li><strong>Intersección:</strong> Cuando x = 0, f(0) es la intersección con el eje Y.</li>
+  </ul>
+  <p><strong>Ejemplos:</strong></p>
+  <ul>
+    <li>f(x) = 2x² - 3x + 1 → Polinomio de segundo grado.</li>
+    <li>f(x) = x³ - 6x² + 11x - 6 → Raíces: x = 1, 2, 3.</li>
+    <li>f(x) = -x⁴ + 4x² → Grado 4, con raíces en x = -2, 0, 2.</li>
+  </ul>
+</section>
+
+<section id="unidad4">
+  <h2>Unidad 4: Geometría del Espacio</h2>
+  <p><strong>Teoría:</strong> Estudia figuras tridimensionales y sus propiedades. Las principales son prismas, cilindros, pirámides, conos y esferas. Se analizan el volumen y las áreas.</p>
+  <p><strong>Fórmulas básicas:</strong></p>
+  <ul>
+    <li><strong>Volumen del prisma:</strong> Área de la base × altura.</li>
+    <li><strong>Volumen del cilindro:</strong> πr²h.</li>
+    <li><strong>Volumen de la pirámide:</strong> (Área de la base × altura) ÷ 3.</li>
+    <li><strong>Volumen de la esfera:</strong> (4/3)πr³.</li>
+  </ul>
+  <p><strong>Ejemplos:</strong></p>
+  <ul>
+    <li>Prisma rectangular con base 4×3 y altura 5: Volumen = 4×3×5 = 60.</li>
+    <li>Cilindro con radio 3 y altura 7: Volumen ≈ 3.1416×9×7 ≈ 197.9.</li>
+  </ul>
+</section>
+
+<section id="unidad5">
+  <h2>Unidad 5: Estadística Inferencial (Introducción)</h2>
+  <p><strong>Teoría:</strong> La estadística inferencial permite extraer conclusiones sobre una población, usando datos de una muestra. Involucra estimaciones, pruebas de hipótesis y márgenes de error.</p>
+  <p><strong>Conceptos clave:</strong></p>
+  <ul>
+    <li><strong>Muestra:</strong> Subconjunto de la población.</li>
+    <li><strong>Parámetro:</strong> Valor exacto de la población (desconocido).</li>
+    <li><strong>Estadístico:</strong> Valor calculado de la muestra.</li>
+    <li><strong>Error muestral:</strong> Diferencia entre el parámetro y el estadístico.</li>
+  </ul>
+  <p><strong>Ejemplos:</strong></p>
+  <ul>
+    <li>De 500 estudiantes, se encuesta a 50 sobre sus horas de estudio. El promedio muestral es una estimación del promedio poblacional.</li>
+    <li>Se estima con un 95% de confianza que el promedio de calificaciones está entre 14 y 16 puntos.</li>
+  </ul>
+</section>
+
+  <section id="test" class="test-section">
+    <h2>Fast Test - Examen Rápido</h2>
+    <form id="fastTest">
+      <p><strong>1. ¿Cuál es la derivada de f(x) = 5x³?</strong></p>
+      <label><input type="radio" name="q1" value="15x²"> 15x²</label><br>
+      <label><input type="radio" name="q1" value="10x"> 10x</label><br>
+      <label><input type="radio" name="q1" value="5x²"> 5x²</label><br>
+
+      <p><strong>2. ¿Cuánto es el límite de (x² - 9)/(x - 3) cuando x → 3?</strong></p>
+      <label><input type="radio" name="q2" value="6"> 6</label><br>
+      <label><input type="radio" name="q2" value="0"> 0</label><br>
+      <label><input type="radio" name="q2" value="9"> 9</label><br>
+
+      <p><strong>3. ¿Cuál es el volumen de un cubo de lado 4 cm?</strong></p>
+      <label><input type="radio" name="q3" value="64"> 64 cm³</label><br>
+      <label><input type="radio" name="q3" value="16"> 16 cm³</label><br>
+      <label><input type="radio" name="q3" value="8"> 8 cm³</label><br>
+
+      <br>
+      <button type="button" onclick="calcularTest()">Calcular Puntaje</button>
+    </form>
+    <p id="resultado" style="font-weight:bold; margin-top: 15px;"></p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Colegio Sagrado Corazón de Jesús - Cochas Chico, Huancayo</p>
+</footer>
+
+<script>
+  function calcularTest() {
+    let puntaje = 0;
+    const respuestas = {
+      q1: "15x²",
+      q2: "6",
+      q3: "64"
+    };
+
+    for (let pregunta in respuestas) {
+      const seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+      if (seleccionada && seleccionada.value === respuestas[pregunta]) {
+        puntaje++;
+      }
+    }
+
+    document.getElementById("resultado").textContent = `Tu puntaje es: ${puntaje} de 3`;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matemáticas - 1° de Secundaria | Colegio de Huancayo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0056b3;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007bff;
+    }
+    .pregunta, .ejercicio {
+      background-color: #e9f7ef;
+      padding: 15px;
+      margin-top: 15px;
+      border-left: 5px solid #28a745;
+    }
+    footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Matemáticas - 1° de Secundaria</h1>
+  <p>Aprendiendo Matemáticas en tu colegio de Huancayo</p>
+</header>
+
+<nav>
+  <a href="#cap1">Números primos y compuestos</a>
+  <a href="#cap2">Estudio de los Divisores</a>
+  <a href="#cap3">Potenciación</a>
+  <a href="#cap4">Radicación</a>
+  <a href="#cap5">Sucesión Numérica</a>
+</nav>
+
+<main>
+<section id="cap1">
+    <h2>Unidad 1: Números primos y compuestos</h2>
+    <p><strong>Teoría:</strong> Un número primo es aquel que solo tiene dos divisores: el número 1 y él mismo. Los números primos son muy importantes en matemáticas, especialmente en criptografía, factorización y teoría de números.</p>
+    <p>Por otro lado, un número compuesto es aquel que tiene más de dos divisores. Esto significa que puede descomponerse en factores distintos de 1 y de sí mismo.</p>
+    <p><strong>Primeros números primos:</strong> 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...</p>
+    <p><strong>Características:</strong></p>
+    <ul>
+        <li>El número primo más pequeño es el 2 (único número primo par).</li>
+        <li>Todo número compuesto se puede expresar como producto de números primos (factorización).</li>
+    </ul>
+    <h3>Ejemplos Prácticos:</h3>
+    <ol>
+        <li>¿El número 7 es primo?<br><strong>Respuesta:</strong> Sí, porque sus únicos divisores son 1 y 7.</li>
+        <li>¿El número 12 es compuesto?<br><strong>Respuesta:</strong> Sí, porque tiene divisores: 1, 2, 3, 4, 6 y 12.</li>
+        <li>¿El número 17 es primo?<br><strong>Respuesta:</strong> Sí, solo es divisible entre 1 y 17.</li>
+        <li>¿El número 20 es compuesto?<br><strong>Respuesta:</strong> Sí, divisores: 1, 2, 4, 5, 10, 20.</li>
+        <li>¿Cuáles son los divisores del número 9?<br><strong>Respuesta:</strong> 1, 3, 9 (es compuesto).</li>
+    </ol>
+
+    <h3>Fast Test - Examen Rápido:</h3>
+    <form id="fastTestCap1">
+        <p><strong>1. ¿Cuál es el número primo más pequeño?</strong></p>
+        <label><input type="radio" name="q1" value="2"> 2</label><br>
+        <label><input type="radio" name="q1" value="3"> 3</label><br>
+        <label><input type="radio" name="q1" value="1"> 1</label><br>
+
+        <p><strong>2. ¿Cuál de estos números es compuesto?</strong></p>
+        <label><input type="radio" name="q2" value="5"> 5</label><br>
+        <label><input type="radio" name="q2" value="11"> 11</label><br>
+        <label><input type="radio" name="q2" value="9"> 9</label><br>
+
+        <p><strong>3. ¿Cuántos divisores tiene el número 13?</strong></p>
+        <label><input type="radio" name="q3" value="2"> 2</label><br>
+        <label><input type="radio" name="q3" value="3"> 3</label><br>
+        <label><input type="radio" name="q3" value="4"> 4</label><br>
+
+        <button type="button" onclick="calcularFastTestCap1()">Calcular Puntaje</button>
+    </form>
+    <p id="resultadoCap1" style="font-weight:bold; margin-top: 15px;"></p>
+    </section>
+
+    <script>
+    function calcularFastTestCap1() {
+    let puntaje = 0;
+    const respuestas = {
+        q1: "2",
+        q2: "9",
+        q3: "2"
+    };
+
+    for (let pregunta in respuestas) {
+        const seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+        if (seleccionada && seleccionada.value === respuestas[pregunta]) {
+        puntaje++;
+        }
+    }
+
+    document.getElementById("resultadoCap1").textContent = `Tu puntaje es: ${puntaje} de 3`;
+    }
+    </script>
+
+
+  <section id="cap2">
+  <h2>Unidad 2: Estudio de los Divisores</h2>
+  <p><strong>Teoría:</strong> Un divisor de un número es otro número que lo divide exactamente, sin dejar residuo. Por ejemplo, 4 es divisor de 12 porque 12 ÷ 4 = 3 (resultado exacto).</p>
+  <p>Para encontrar los divisores de un número, se busca qué números multiplicados entre sí dan como resultado ese número.</p>
+  <p><strong>Propiedades importantes:</strong></p>
+  <ul>
+    <li>Todo número es divisible entre 1 y él mismo.</li>
+    <li>El número 1 es divisor de todos los números.</li>
+    <li>Para conocer si un número es divisor, debes comprobar que la división sea exacta (residuo 0).</li>
+  </ul>
+
+  <h3>Ejemplos Prácticos:</h3>
+  <ol>
+    <li><strong>Divisores de 12:</strong><br>
+      1, 2, 3, 4, 6, 12.</li>
+    <li><strong>Divisores de 15:</strong><br>
+      1, 3, 5, 15.</li>
+    <li><strong>Divisores de 20:</strong><br>
+      1, 2, 4, 5, 10, 20.</li>
+    <li><strong>¿Es 7 divisor de 49?</strong><br>
+      Sí, porque 49 ÷ 7 = 7.</li>
+    <li><strong>¿Es 9 divisor de 45?</strong><br>
+      Sí, porque 45 ÷ 9 = 5.</li>
+  </ol>
+
+  <h3>Fast Test - Examen Rápido:</h3>
+  <form id="fastTestCap2">
+    <p><strong>1. ¿Cuál es el divisor más pequeño de cualquier número?</strong></p>
+    <label><input type="radio" name="q1" value="1"> 1</label><br>
+    <label><input type="radio" name="q1" value="2"> 2</label><br>
+    <label><input type="radio" name="q1" value="0"> 0</label><br>
+
+    <p><strong>2. ¿Cuáles son los divisores de 10?</strong></p>
+    <label><input type="radio" name="q2" value="1, 2, 5, 10"> 1, 2, 5, 10</label><br>
+    <label><input type="radio" name="q2" value="1, 3, 5, 10"> 1, 3, 5, 10</label><br>
+    <label><input type="radio" name="q2" value="2, 5, 10"> 2, 5, 10</label><br>
+
+    <p><strong>3. ¿Qué número NO es divisor de 24?</strong></p>
+    <label><input type="radio" name="q3" value="8"> 8</label><br>
+    <label><input type="radio" name="q3" value="3"> 3</label><br>
+    <label><input type="radio" name="q3" value="7"> 7</label><br>
+
+    <button type="button" onclick="calcularFastTestCap2()">Calcular Puntaje</button>
+  </form>
+  <p id="resultadoCap2" style="font-weight:bold; margin-top: 15px;"></p>
+</section>
+
+    <script>
+    function calcularFastTestCap2() {
+    let puntaje = 0;
+    const respuestas = {
+        q1: "1",
+        q2: "1, 2, 5, 10",
+        q3: "7"
+    };
+
+    for (let pregunta in respuestas) {
+        const seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+        if (seleccionada && seleccionada.value === respuestas[pregunta]) {
+        puntaje++;
+        }
+    }
+
+    document.getElementById("resultadoCap2").textContent = `Tu puntaje es: ${puntaje} de 3`;
+    }
+    </script>
+
+
+<section id="cap3">
+    <h2>Unidad 3: Potenciación</h2>
+    <p><strong>Teoría:</strong> La potenciación es una operación matemática que consiste en multiplicar un número por sí mismo varias veces. El número que se multiplica se llama <strong>base</strong> y el número de veces que se multiplica se llama <strong>exponente</strong>.</p>
+    <p><strong>Fórmula general:</strong> a<sup>n</sup> = a × a × a × ... × a (n veces)</p>
+    <p>Se utiliza para expresar de forma compacta multiplicaciones repetidas.</p>
+    <p><strong>Propiedades de la potenciación:</strong></p>
+    <ul>
+        <li>a<sup>1</sup> = a (Todo número elevado a 1 es él mismo).</li>
+        <li>a<sup>0</sup> = 1 (Todo número distinto de cero elevado a 0 es 1).</li>
+        <li>(a<sup>m</sup>) × (a<sup>n</sup>) = a<sup>m+n</sup></li>
+        <li>(a<sup>m</sup>) ÷ (a<sup>n</sup>) = a<sup>m-n</sup></li>
+        <li>(a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></li>
+    </ul>
+
+    <h3>Ejemplos Prácticos:</h3>
+    <ol>
+        <li>3<sup>2</sup> = 3 × 3 = 9.</li>
+        <li>5<sup>3</sup> = 5 × 5 × 5 = 125.</li>
+        <li>2<sup>4</sup> = 2 × 2 × 2 × 2 = 16.</li>
+        <li>10<sup>0</sup> = 1 (Por propiedad de exponente 0).</li>
+        <li>(2<sup>3</sup>) × (2<sup>2</sup>) = 2<sup>5</sup> = 32 (Por propiedad de suma de exponentes).</li>
+    </ol>
+
+    <h3>Fast Test - Examen Rápido:</h3>
+    <form id="fastTestCap3">
+        <p><strong>1. ¿Cuánto es 4<sup>2</sup>?</strong></p>
+        <label><input type="radio" name="q1" value="8"> 8</label><br>
+        <label><input type="radio" name="q1" value="16"> 16</label><br>
+        <label><input type="radio" name="q1" value="12"> 12</label><br>
+
+        <p><strong>2. ¿Cuál es el resultado de 2<sup>0</sup>?</strong></p>
+        <label><input type="radio" name="q2" value="0"> 0</label><br>
+        <label><input type="radio" name="q2" value="1"> 1</label><br>
+        <label><input type="radio" name="q2" value="2"> 2</label><br>
+
+        <p><strong>3. ¿Cuánto es (3<sup>2</sup>) × (3<sup>1</sup>)?</strong></p>
+        <label><input type="radio" name="q3" value="9"> 9</label><br>
+        <label><input type="radio" name="q3" value="27"> 27</label><br>
+        <label><input type="radio" name="q3" value="243"> 243</label><br>
+
+        <button type="button" onclick="calcularFastTestCap3()">Calcular Puntaje</button>
+    </form>
+    <p id="resultadoCap3" style="font-weight:bold; margin-top: 15px;"></p>
+</section>
+
+    <script>
+    function calcularFastTestCap3() {
+    let puntaje = 0;
+    const respuestas = {
+        q1: "16",
+        q2: "1",
+        q3: "27"
+    };
+
+    for (let pregunta in respuestas) {
+        const seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+        if (seleccionada && seleccionada.value === respuestas[pregunta]) {
+        puntaje++;
+        }
+    }
+
+    document.getElementById("resultadoCap3").textContent = `Tu puntaje es: ${puntaje} de 3`;
+    }
+    </script>
+
+    <section id="cap4">
+    <h2>Unidad 4: Radicación</h2>
+    <p><strong>Teoría:</strong> La radicación es la operación inversa de la potenciación. Consiste en encontrar un número que, elevado a un exponente, da como resultado el número original.</p>
+    <p>La raíz más común es la <strong>raíz cuadrada</strong>, que busca un número que multiplicado por sí mismo dé el número original.</p>
+    <p><strong>Fórmula básica:</strong> √a = x → x × x = a</p>
+    <p><strong>Propiedades de la raíz cuadrada:</strong></p>
+    <ul>
+        <li>La raíz cuadrada de un número perfecto siempre es un número entero.</li>
+        <li>Si el número no es un cuadrado perfecto, la raíz es un número decimal o irracional.</li>
+        <li>√(a × b) = √a × √b (si a y b ≥ 0).</li>
+    </ul>
+
+    <h3>Ejemplos Prácticos:</h3>
+    <ol>
+        <li>√9 = 3, porque 3 × 3 = 9.</li>
+        <li>√16 = 4, porque 4 × 4 = 16.</li>
+        <li>√25 = 5, porque 5 × 5 = 25.</li>
+        <li>√49 = 7, porque 7 × 7 = 49.</li>
+        <li>√100 = 10, porque 10 × 10 = 100.</li>
+    </ol>
+
+    <h3>Fast Test - Examen Rápido:</h3>
+    <form id="fastTestCap4">
+        <p><strong>1. ¿Cuál es la raíz cuadrada de 36?</strong></p>
+        <label><input type="radio" name="q1" value="5"> 5</label><br>
+        <label><input type="radio" name="q1" value="6"> 6</label><br>
+        <label><input type="radio" name="q1" value="7"> 7</label><br>
+
+        <p><strong>2. ¿Cuál es el resultado de √64?</strong></p>
+        <label><input type="radio" name="q2" value="6"> 6</label><br>
+        <label><input type="radio" name="q2" value="8"> 8</label><br>
+        <label><input type="radio" name="q2" value="10"> 10</label><br>
+
+        <p><strong>3. ¿Qué número, multiplicado por sí mismo, da 121?</strong></p>
+        <label><input type="radio" name="q3" value="11"> 11</label><br>
+        <label><input type="radio" name="q3" value="12"> 12</label><br>
+        <label><input type="radio" name="q3" value="10"> 10</label><br>
+
+        <button type="button" onclick="calcularFastTestCap4()">Calcular Puntaje</button>
+    </form>
+    <p id="resultadoCap4" style="font-weight:bold; margin-top: 15px;"></p>
+    </section>
+
+    <script>
+    function calcularFastTestCap4() {
+    let puntaje = 0;
+    const respuestas = {
+        q1: "6",
+        q2: "8",
+        q3: "11"
+    };
+
+    for (let pregunta in respuestas) {
+        const seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+        if (seleccionada && seleccionada.value === respuestas[pregunta]) {
+        puntaje++;
+        }
+    }
+
+    document.getElementById("resultadoCap4").textContent = `Tu puntaje es: ${puntaje} de 3`;
+    }
+    </script>
+
+
+    <section id="cap5">
+    <h2>Unidad 5: Sucesión Numérica</h2>
+    <p><strong>Teoría:</strong> Una sucesión numérica es un conjunto ordenado de números que siguen una regla o patrón específico.</p>
+    <p>Los números que forman la sucesión se llaman <strong>términos</strong>, y cada uno tiene una posición dentro de la secuencia.</p>
+    <p>Existen diferentes tipos de sucesiones:</p>
+    <ul>
+        <li><strong>Sucesión Aritmética:</strong> Se suma (o resta) la misma cantidad a cada término para obtener el siguiente.  
+        Fórmula: a<sub>n</sub> = a<sub>1</sub> + (n-1) × d  
+        Donde:  
+        a<sub>1</sub> = primer término  
+        d = diferencia constante</li>
+        <li><strong>Sucesión Geométrica:</strong> Cada término se obtiene multiplicando por un número fijo llamado razón.  
+        Fórmula: a<sub>n</sub> = a<sub>1</sub> × r<sup>n-1</sup></li>
+    </ul>
+
+    <h3>Ejemplos Prácticos:</h3>
+    <ol>
+        <li><strong>Sucesión Aritmética:</strong> 2, 4, 6, 8, 10...  
+        Regla: Se suma 2 en cada paso.</li>
+        <li><strong>Sucesión Geométrica:</strong> 3, 6, 12, 24, 48...  
+        Regla: Se multiplica por 2 en cada paso.</li>
+        <li>¿Qué número sigue en la sucesión 5, 10, 15, 20...?  
+        Respuesta: 25 (se suma 5 en cada paso).</li>
+        <li>Completa la sucesión: 1, 3, 5, 7, __, __.  
+        Respuesta: 9, 11 (se suma 2 en cada paso).</li>
+        <li>Completa la sucesión geométrica: 2, 4, 8, __, __.  
+        Respuesta: 16, 32 (se multiplica por 2 en cada paso).</li>
+    </ol>
+
+    <h3>Fast Test - Examen Rápido:</h3>
+    <form id="fastTestCap5">
+        <p><strong>1. ¿Qué tipo de sucesión es 2, 4, 6, 8, 10?</strong></p>
+        <label><input type="radio" name="q1" value="Aritmética"> Aritmética</label><br>
+        <label><input type="radio" name="q1" value="Geométrica"> Geométrica</label><br>
+        <label><input type="radio" name="q1" value="Mixta"> Mixta</label><br>
+
+        <p><strong>2. ¿Cuál es el siguiente número en la sucesión 3, 6, 12, 24...?</strong></p>
+        <label><input type="radio" name="q2" value="30"> 30</label><br>
+        <label><input type="radio" name="q2" value="48"> 48</label><br>
+        <label><input type="radio" name="q2" value="50"> 50</label><br>
+
+        <p><strong>3. ¿Qué número sigue en la sucesión 1, 4, 7, 10...?</strong></p>
+        <label><input type="radio" name="q3" value="11"> 11</label><br>
+        <label><input type="radio" name="q3" value="13"> 13</label><br>
+        <label><input type="radio" name="q3" value="14"> 14</label><br>
+
+        <button type="button" onclick="calcularFastTestCap5()">Calcular Puntaje</button>
+    </form>
+    <p id="resultadoCap5" style="font-weight:bold; margin-top: 15px;"></p>
+    </section>
+
+    <script>
+    function calcularFastTestCap5() {
+    let puntaje = 0;
+    const respuestas = {
+        q1: "Aritmética",
+        q2: "48",
+        q3: "13"
+    };
+
+    for (let pregunta in respuestas) {
+        const seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+        if (seleccionada && seleccionada.value === respuestas[pregunta]) {
+        puntaje++;
+        }
+    }
+
+    document.getElementById("resultadoCap5").textContent = `Tu puntaje es: ${puntaje} de 3`;
+    }
+    </script>
+
+</main>
+
+<footer>
+  <p>© 2025 Colegio de Huancayo - Matemáticas 1° Secundaria</p>
+</footer>
+
+</body>
+</html>
+
