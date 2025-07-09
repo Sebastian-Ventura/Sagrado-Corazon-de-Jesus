@@ -12,6 +12,33 @@ body {
     overflow: hidden; /* Evitar barras de desplazamiento si el contenido es más pequeño */
 }
 
+/* Estilo para la imagen del escudo */
+.escudo-img {
+    max-width: 250px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* ¡Clave para que se acomode en móviles! */
+    gap: 20px; /* Espacio entre el escudo y la tarjeta */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .escudo-img {
+        max-width: 150px;
+        margin-right: 0;
+    }
+    
+    .login-container {
+        flex-direction: column;
+    }
+}
+
 .login-container {
     display: flex;
     justify-content: center;
